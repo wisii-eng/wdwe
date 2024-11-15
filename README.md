@@ -1,5 +1,5 @@
 <p align="center">
-	<img alt="logo" src="http://www.wisii.com/newwisii/images/logo_01.gif">
+	<img alt="logo" src="./wdwe-core/src/main/resources/images/logo_01.png">
 </p>
 <h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">wdwe</h1>
 <h4 align="center">基于B/S架构的文档处理引擎</h4>
