@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServerConfig xsi:noNamespaceSchemaLocation="ServerConfig.xsd">
+	<!--server端接收socket缓冲池-->
+	<SocketPoolSize>100</SocketPoolSize>
+	<!--server端实际生成pdf线程缓冲池-->
+	<!-- 当前运行的排版线程数，范围：-1和1到int最大值，-1代表是系统自动判断，目前是cpu核心数+1。1到int最大值则是手动指定运行的最大线程数 -->
+	<RunPoolSize>-1</RunPoolSize>
+	<!-- xsl所在位置 -->
+	<XSLTPath></XSLTPath>
+	<!-- server端口 -->
+	<ServerPort>8888</ServerPort>
+	<PdfPath>D:\temp\</PdfPath>
+	<!-- 是否以排版线程控制模式运行，true是采用排版线程控制模式，false是不采用 -->
+	<Concurrency>true</Concurrency>
+	<!-- 运行线程池的类型：fixed：以线程控制形成运行，cached以缓冲形式运行 -->
+	<RunPoolState>fixed</RunPoolState>
+</ServerConfig>

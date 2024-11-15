@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServerConfig xsi:noNamespaceSchemaLocation="ServerConfig.xsd">
+	<!--server端接收socket缓冲池-->
+	<SocketPoolSize>100</SocketPoolSize>
+	<!--server端实际生成pdf线程缓冲池-->
+	<RunPoolSize>4</RunPoolSize>
+	<!-- xsl所在位置 -->
+	<XSLTPath>D:\DevProj\Projects\Job\WdemsWeb\WdemsVss\jsp\wisiibase\template\sinoN.xsl</XSLTPath>
+	<!-- server端口 -->
+	<ServerPort>8888</ServerPort>
+	<PdfPath>D:\temp\</PdfPath>
+	<Concurrency>true</Concurrency>
+	<RunPoolState>cached</RunPoolState>
+</ServerConfig>

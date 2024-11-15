@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--公共默认所有权限-->
+	<globle-authority name="default" authority="all"/>
+	
+	<globle-authority name="g12" authority="component-all">
+		<components>
+			<component>role1</component>
+			<component>role2</component>
+		</components>
+	</globle-authority>
+	<globle-authority name="g34" authority="component-all">
+		<components>
+			<component>role3</component>
+			<component>role4</component>
+		</components>
+	</globle-authority>
+	<globle-authority name="g56" authority="component-all">
+		<components>
+			<component>role5</component>
+			<component>role6</component>
+		</components>
+	</globle-authority>
+	
+</root>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Validator name="isBlankOrNull" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isBlankOrNull" methodparams="java.lang.String" msg="error.isBlankOrNull"/>
+	<Validator name="isByte" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isByte" methodparams="java.lang.String" msg="error.isByte"/>
+	<Validator name="isDouble" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isDouble" methodparams="java.lang.String" msg="error.isDouble"/>
+	<Validator name="isFloat" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isFloat" methodparams="java.lang.String" msg="error.isFloat"/>
+	<Validator name="isInt" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isInt" methodparams="java.lang.String" msg="error.isInt"/>
+	<Validator name="isLong" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isLong" methodparams="java.lang.String" msg="error.isLong"/>
+	<Validator name="isShort" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isShort" methodparams="java.lang.String" msg="error.isShort"/>
+	<Validator name="matchRegexp" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="matchRegexp" methodparams="java.lang.String,java.lang.String" msg="error.matchRegexp"/>
+	<Validator name="maxLength" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="maxLength" methodparams="java.lang.String,java.lang.String" msg="error.maxLength"/>
+	<Validator name="minLength" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="minLength" methodparams="java.lang.String,java.lang.String" msg="error.minLength"/>
+	
+	<Validator name="isInRangeWithByte" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isInRangeWithByte" methodparams="java.lang.String,java.lang.String,java.lang.String" msg="error.isInRange"/>
+	<Validator name="isInRangeWithInt" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isInRangeWithInt" methodparams="java.lang.String,java.lang.String,java.lang.String" msg="error.isInRange"/>
+	<Validator name="isInRangeWithLong" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isInRangeWithLong" methodparams="java.lang.String,java.lang.String,java.lang.String" msg="error.isInRange"/>
+	<Validator name="isInRangeWithFloat" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isInRangeWithFloat" methodparams="java.lang.String,java.lang.String,java.lang.String" msg="error.isInRange"/>
+	<Validator name="isInRangeWithDouble" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isInRangeWithDouble" methodparams="java.lang.String,java.lang.String,java.lang.String" msg="error.isInRange"/>
+	<Validator name="isInRangeWithShort" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isInRangeWithShort" methodparams="java.lang.String,java.lang.String,java.lang.String" msg="error.isInRange"/>
+	
+	<Validator name="maxValueWithInt" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="maxValueWithInt" methodparams="java.lang.String,java.lang.String" msg="error.maxValue"/>
+	<Validator name="maxValueWithByte" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="maxValueWithByte" methodparams="java.lang.String,java.lang.String" msg="error.maxValue"/>
+	<Validator name="maxValueWithLong" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="maxValueWithLong" methodparams="java.lang.String,java.lang.String" msg="error.maxValue"/>
+	<Validator name="maxValueWithShort" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="maxValueWithShort" methodparams="java.lang.String,java.lang.String" msg="error.maxValue"/>
+	<Validator name="maxValueWithFloat" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="maxValueWithFloat" methodparams="java.lang.String,java.lang.String" msg="error.maxValue"/>
+	<Validator name="maxValueWithDouble" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="maxValueWithDouble" methodparams="java.lang.String,java.lang.String" msg="error.maxValue"/>
+	
+	<Validator name="minValueWithInt" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="minValueWithInt" methodparams="java.lang.String,java.lang.String" msg="error.minValue"/>
+	<Validator name="minValueWithLong" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="minValueWithLong" methodparams="java.lang.String,java.lang.String" msg="error.minValue"/>
+	<Validator name="minValueWithShort" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="minValueWithShort" methodparams="java.lang.String,java.lang.String" msg="error.minValue"/>
+	<Validator name="minValueWithByte" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="minValueWithByte" methodparams="java.lang.String,java.lang.String" msg="error.minValue"/>
+	<Validator name="minValueWithFloat" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="minValueWithFloat" methodparams="java.lang.String,java.lang.String" msg="error.minValue"/>
+	<Validator name="minValueWithDouble" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="minValueWithDouble" methodparams="java.lang.String,java.lang.String" msg="error.minValue"/>
+	
+	<Validator name="isBeforeDate" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isBeforeDate" methodparams="java.util.Date,java.lang.String" msg="error.isBeforeDate"/>
+	<Validator name="isBeforeDate" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isBeforeDate" methodparams="java.util.Date,java.lang.String,java.lang.String" msg="error.isBeforeDate"/>
+	
+	<Validator name="isAfterDate" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isAfterDate" methodparams="java.util.Date,java.lang.String" msg="error.isAfterDate"/>
+	<Validator name="isAfterDate" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isAfterDate" methodparams="java.util.Date,java.lang.String,java.lang.String" msg="error.isAfterDate"/>
+	
+	<Validator name="isInRangeOfDate" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isInRangeOfDate" methodparams="java.util.Date,java.lang.String,java.lang.String" msg="error.isInRangeOfDate"/>
+	<Validator name="isInRangeOfDate" classname="com.wisii.edit.validator.FieldCheck.CommFieldCheck" method="isInRangeOfDate" methodparams="java.util.Date,java.lang.String,java.lang.String,java.lang.String" msg="error.isInRangeOfDate"/>
+</root>
