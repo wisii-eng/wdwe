@@ -365,10 +365,6 @@ public class CreateAreaTree extends WisiiComponent implements ErrorListener {
 		xsltParams.addElement(value);
 	}
 
-	// 以下为test使用
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		FileInputStream inpustream = null;
 

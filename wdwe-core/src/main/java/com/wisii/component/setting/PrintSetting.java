@@ -151,16 +151,6 @@ public class PrintSetting implements Serializable {
 
 	}
 
-	/**
-	 * 根据PrintSetting将返回参数格式："printer"+printer+"&excursionX=" + excursionX +
-	 * "&excursionY=" + excursionY + "&scaleX=" + scaleX + "&scaleY=" + scaleY +
-	 * "&isSelectedHeightCheckBox=" + isSelectedHeightCheckBox +
-	 * "&heightAddABS=" + heightAddABS + "&orientationRequested=" +
-	 * orientationRequested + "&printSquence=" ; // return "PS,HP LaserJet
-	 * 6P,/MediaPosition 0#PS,HP LaserJet 6P,/MediaPosition 2#PS,HP LaserJet
-	 * 6P,/MediaPosition 1";
-	 * 
-	 */
 	public String toString() {
 		String basePs = null;
 		basePs = "printer=" + printer
@@ -239,23 +229,14 @@ public class PrintSetting implements Serializable {
     	}
     	return ref;
     }
-	/**
-	 * @return
-	 */
 	public int getCopies() {
 		return copies;
 	}
 
-	/**
-	 * @param copies
-	 */
 	public void setCopies(int copies) {
 		this.copies = copies;
 	}
 
-	/**
-	 * @param copies
-	 */
 	public void setCopies(String copies) {
 		try {
 			this.copies = Integer.parseInt(copies);
@@ -264,39 +245,22 @@ public class PrintSetting implements Serializable {
 		}
 	}
 
-	/**
-	 * @return
-	 */
 	public String getPageCount() {
 		return pageCount;
 	}
 
-	/**
-	 * @param pageCount
-	 */
 	public void setPageCount(String pageCount) {
 		this.pageCount = pageCount;
 	}
 
-	/**
-	 * @return
-	 */
 	public Map getPrintRefMap() {
 		return printRefMap;
 	}
 
-	/**
-	 * 添加一行打印参数
-	 * 
-	 * @param printRefMap
-	 */
 	public void addPrintRef(PrintRef pr) {
 		printRefMap.put(pr.getGroupId() + "", pr);
 	}
 
-	/**
-	 * @return the excursionX
-	 */
 	public float getExcursionX() {
 
 		if (excursionX < MIN_excursion) {
@@ -308,19 +272,11 @@ public class PrintSetting implements Serializable {
 		return excursionX;
 	}
 
-	/**
-	 * @param excursionX
-	 *            the excursionX to set
-	 */
 	public void setExcursion(float excursionX, float excursionY) {
 		this.excursionX = excursionX;
 		this.excursionY = excursionY;
 	}
 
-	/**
-	 * @param excursionX
-	 *            the excursionX to set
-	 */
 	public void setExcursion(String texcursionX, String texcursionY) {
 
 		if (texcursionX != null) {
@@ -376,9 +332,6 @@ public class PrintSetting implements Serializable {
 
 	}
 
-	/**
-	 * @return the excursionY
-	 */
 	public float getExcursionY() {
 
 		if (excursionY < MIN_excursion) {
@@ -390,26 +343,15 @@ public class PrintSetting implements Serializable {
 		return excursionY;
 	}
 
-	/**
-	 * @return the heightAddABS
-	 */
 	public float getHeightAddABS() {
 		return heightAddABS;
 	}
 
-	/**
-	 * @param heightAddABS
-	 *            the heightAddABS to set
-	 */
 	public void setHeightAddABS(float heightAddABS) {
 
 		this.heightAddABS = heightAddABS;
 	}
 
-	/**
-	 * @param heightAddABS
-	 *            the heightAddABS to set
-	 */
 	public void setHeightAddABS(String theightAddABS) {
 		try {
 			if (theightAddABS != null) {
@@ -421,25 +363,14 @@ public class PrintSetting implements Serializable {
 
 	}
 
-	/**
-	 * @return the isSelectedHeightCheckBox
-	 */
 	public boolean isSelectedHeightCheckBox() {
 		return isSelectedHeightCheckBox;
 	}
 
-	/**
-	 * @param isSelectedHeightCheckBox
-	 *            the isSelectedHeightCheckBox to set
-	 */
 	public void setSelectedHeightCheckBox(boolean isSelectedHeightCheckBox) {
 		this.isSelectedHeightCheckBox = isSelectedHeightCheckBox;
 	}
 
-	/**
-	 * @param isSelectedHeightCheckBox
-	 *            the isSelectedHeightCheckBox to set
-	 */
 	public void setSelectedHeightCheckBox(String tisSelectedHeightCheckBox) {
 
 		if (tisSelectedHeightCheckBox != null) {
@@ -454,27 +385,16 @@ public class PrintSetting implements Serializable {
 
 	}
 
-	/**
-	 * @return the orientationRequested
-	 */
 	public OrientationRequested getOrientationRequested() {
 		return orientationRequested;
 	}
 
-	/**
-	 * @param orientationRequested
-	 *            the orientationRequested to set
-	 */
 	public void setOrientationRequested(
 			OrientationRequested orientationRequested) {
 
 		this.orientationRequested = orientationRequested;
 	}
 
-	/**
-	 * @param orientationRequested
-	 *            the orientationRequested to set
-	 */
 	public void setOrientationRequested(String torientationRequested) {
 		String or = torientationRequested;
 		if (or != null) {
@@ -489,9 +409,6 @@ public class PrintSetting implements Serializable {
 
 	}
 
-	/**
-	 * @return the scaleX
-	 */
 	public float getScaleX() {
 
 		if (scaleX < MIN_PERCENT) {
@@ -502,19 +419,11 @@ public class PrintSetting implements Serializable {
 		return scaleX;
 	}
 
-	/**
-	 * @param scaleX
-	 *            the scaleX to set
-	 */
 	public void setScale(float scaleX, float scaleY) {
 		this.scaleX = scaleX;
 		this.scaleY = scaleY;
 	}
 
-	/**
-	 * @param scaleX
-	 *            the scaleX to set
-	 */
 	public void setScale(String tscaleX, String tscaleY) {
 		if (tscaleX != null) {
 			try {
@@ -566,9 +475,6 @@ public class PrintSetting implements Serializable {
 
 	}
 
-	/**
-	 * @return the scaleY
-	 */
 	public float getScaleY() {
 
 		if (scaleY < MIN_PERCENT) {
@@ -586,17 +492,10 @@ public class PrintSetting implements Serializable {
 
 	}
 
-	/**
-	 * @return the printer
-	 */
 	public String getPrinter() {
 		return printer;
 	}
 
-	/**
-	 * @param printer
-	 *            the printer to set
-	 */
 	public void setPrinter(String printer) {
 
 		this.printer = printer;
@@ -607,25 +506,14 @@ public class PrintSetting implements Serializable {
 		}
 	}
 
-	/**
-	 * @return outputFileName
-	 */
 	public File getOutputFile() {
 		return outputFile;
 	}
 
-	/**
-	 * @param outputFileName
-	 *            要设置的 outputFileName
-	 */
 	public void setOutputFile(File outputFileName) {
 		this.outputFile = outputFileName;
 	}
 
-	/**
-	 * @param outputFileName
-	 *            要设置的 outputFileName
-	 */
 	public void setOutputFileName(String outputFile) {
 		this.outputFile = new File(outputFile);
 	}
@@ -647,9 +535,6 @@ public class PrintSetting implements Serializable {
 		return i;
 	}
 
-	/**
-	 * @return the jobName
-	 */
 	public JobName getJobName() {
 		if(jobName==null)
 		{
@@ -658,55 +543,31 @@ public class PrintSetting implements Serializable {
 		return jobName;
 	}
 
-	/**
-	 * @param jobName the jobName to set
-	 */
 	public void setJobName(String jobName) {
 		this.jobName = new JobName(jobName, null); 
 
 	}
 
-	/**
-	 * @return the pageCS
-	 */
 	public  int getPageCS() {
 		return pageCS;
 	}
 
-	/**
-	 * @param pageCS the pageCS to set
-	 */
 	public  void setPageCS(int pageCS) {
 		this.pageCS = pageCS;
 	}
-	/**
-	 * @param pageCe the pageCe to set
-	 */
 	public  void setPageCS(String pageCS) {
 		this.pageCS = Integer.parseInt(pageCS);
 	}
-	/**
-	 * @return the pageCe
-	 */
 	public  int getPageCe() {
 		return pageCe;
 	}
 
-	/**
-	 * @param pageCe the pageCe to set
-	 */
 	public  void setPageCe(int pageCe) {
 		this.pageCe = pageCe;
 	}
-	/**
-	 * @param pageCe the pageCe to set
-	 */
 	public  void setPageCe(String pageCe) {
 		this.pageCe = Integer.parseInt(pageCe);
 	}
-	/**
-	 * @param pageCS the pageCS to set
-	 */
 	public  void setPageCsACe(String pages) {
 		if(pages==null||"".equalsIgnoreCase(pages)) return;
 		String[] df=pages.split("-");

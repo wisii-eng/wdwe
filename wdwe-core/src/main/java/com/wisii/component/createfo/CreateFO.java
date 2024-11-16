@@ -254,10 +254,6 @@ public class CreateFO extends WisiiComponent implements ErrorListener
 		throw exc;
 	}
 
-	// 以下为测试使用
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args)
 	{
 		CreateFO fo = new CreateFO(null);

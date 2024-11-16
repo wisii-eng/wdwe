@@ -27,49 +27,11 @@ import com.wisii.component.mainFramework.ListListener;
  */
 public interface CommunicateProxy
 {
-	/**
-	 * 
-	 * 发送方法
-	 * 
-	 * @param url
-	 *            发送地址
-	 * @param serverType
-	 *            操作类型
-	 * @param params
-	 *            map参数
-	 * @return
-	 */
 	public WdemsDateType send(String serverType, Object params);
 
-	/**
-	 * 
-	 * 发送方法
-	 * 
-	 * @param url
-	 *            发送地址
-	 * @param serverType
-	 *            操作类型
-	 * @param params
-	 *            map参数
-	 * @return
-	 */
 	public WdemsDateType send(Object params);
-	/**
-	 * 接收数据发
-	 * 
-	 * @param stream
-	 *            接收的数据
-	 */
 	public void receiveData(Object stream, ListListener li);
 
-	/**
-	 * 分次发送数据
-	 * 
-	 * @param stream
-	 *            传递的对象
-	 * @param outputStream
-	 *            输出流的引用
-	 */
 	public void reSendData(Object stream, Object outputStream);
 	public void setListern(Object dd);
 	public void close(Object outputStream);

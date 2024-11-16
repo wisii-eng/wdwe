@@ -85,9 +85,6 @@ public class HsqldbService {
 	/**
 	 * 关闭Hsqldb的数据库服务
 	 *
-	 * @param      {引入参数名}   {引入参数说明}
-	 * @return      {返回参数名}   {返回参数说明}
-	 * @exception   {说明在某情况下,将发生什么异常}
 	 */
 	public  void stop(){
 		dbService=null;

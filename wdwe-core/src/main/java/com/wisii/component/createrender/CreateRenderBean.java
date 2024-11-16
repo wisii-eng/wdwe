@@ -159,9 +159,6 @@ public class CreateRenderBean
 		return printSetting;
 	}
 
-	/**
-	 * @param printSetting the printSetting to set
-	 */
 	public void setPrintSetting(PrintSetting tprintSetting) {
 		
 		printSetting=tprintSetting ;

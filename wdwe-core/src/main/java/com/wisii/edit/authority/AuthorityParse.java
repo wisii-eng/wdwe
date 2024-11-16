@@ -71,8 +71,6 @@ public class AuthorityParse {
 	/**
 	 * <p>解析权限配置信息，权限分别保存到map集合中</p>
 	 *
-	 * @param path 配置文件路径
-	 * @return 
 	 */
 	public  static void parse(InputStream input,Map globleAuthorityMap,Map templateAuthorityMap){
 		Document doc = DocumentHelper.createDocument();	

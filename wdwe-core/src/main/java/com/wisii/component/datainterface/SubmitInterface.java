@@ -26,10 +26,5 @@ import java.util.Map;
  *
  */
 public interface SubmitInterface {
-/**
- * 
- * @param 提交给用户的xml
- * @return 如果出现错误信息等需要返回给WDEMS的提示用户错误信息的内容
- */
 	public String  submit(String xml, Map<String, Object> info);
 }

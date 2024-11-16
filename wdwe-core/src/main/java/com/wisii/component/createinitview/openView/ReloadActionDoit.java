@@ -34,19 +34,10 @@ import com.wisii.edit.EditStatusControl.STATUS;
 
 public class ReloadActionDoit extends WholeValidateActionDoit {
 
-	/**
-	 * 
-	 * @param name
-	 * @param iconName
-	 * @param viewe
-	 */
 	public ReloadActionDoit(String name, String iconName) {
 		super(name, iconName);
 	}
 
-	/**
-	 * action的具体逻辑
-	 */
 	@Override
 	public void action(ActionEvent e) {
 		if (EditStatusControl.RUNSTATUS == STATUS.READ) {

@@ -33,20 +33,11 @@ import com.wisii.edit.view.EnginePanel;
  */
 
 public class ExitEditActionDoit extends WholeValidateActionDoit {
-	/**
-	 * 
-	 * @param name
-	 * @param iconName
-	 * @param viewe
-	 */
 	public ExitEditActionDoit(String name, String iconName) {
 		super(name, iconName);
 
 	}
 
-	/**
-	 * action的具体逻辑
-	 */
 	@Override
 	public void action(ActionEvent e) {
 		//判断是否有错误域
@@ -68,9 +59,6 @@ public class ExitEditActionDoit extends WholeValidateActionDoit {
 		askIfSubmit();
 		process();
 	}
-	/**
-	 * 询问用户是否提交，如果选择是则提交 liuxiao
-	 */
 	private void askIfSubmit() {
 
 		if (EditStatusControl.isSubData())

@@ -46,7 +46,7 @@ public class LogFormatter extends Formatter {
     private String lineSeparator = "\r\n";
 
     /** 
-     * @param 日志记录器
+     * @param record 日志记录器
      * @return 返回格式化好的日志内容
      */
     public String format(LogRecord record) {

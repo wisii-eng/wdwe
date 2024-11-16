@@ -19,7 +19,7 @@
  */
 package com.wisii.fov.util;
 import javax.swing.JApplet;
-import netscape.javascript.JSObject;
+//import netscape.javascript.JSObject;
 import com.wisii.component.actionevent.ActionEventType;
 import com.wisii.component.setting.WisiiBean;
 
@@ -63,7 +63,7 @@ public class JSObjectUtil {
 			}
 		}
 		try {
-			JSObject.getWindow(applet).call("wiActionEvent", para);
+//			JSObject.getWindow(applet).call("wiActionEvent", para);
 		} catch (Exception e) {
 		}
 	}
@@ -74,7 +74,7 @@ public class JSObjectUtil {
 			return;
 		}
 		try {
-			JSObject.getWindow(applet).eval("javascript:window.close()");
+//			JSObject.getWindow(applet).eval("javascript:window.close()");
 		} catch (Exception ex) {
 
 		}

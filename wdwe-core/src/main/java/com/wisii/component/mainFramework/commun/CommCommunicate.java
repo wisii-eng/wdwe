@@ -37,16 +37,6 @@ public class CommCommunicate implements CommunicateProxy
 	// ListListener listener;
 	List buffer = new ArrayList();
 	
-	/**
-	 * 服务器返回数据的数据流
-	 * 
-	 * @param url
-	 *            请求服务的ip地址
-	 * @param serverType
-	 *            请求服务的类型
-	 * @param params
-	 *            需要传给服务器的参数
-	 */
 	public WdemsDateType send(String serverType, Object params)
 	{
 
@@ -61,7 +51,6 @@ public class CommCommunicate implements CommunicateProxy
 		}
 		catch (InterruptedException e)
 		{
-			// TODO 自动生成 catch 块
 			e.printStackTrace();
 		}
 		}
@@ -70,25 +59,11 @@ public class CommCommunicate implements CommunicateProxy
 
 	}
 
-	/**
-	 * 用于数据的返回
-	 * 
-	 * @param stream
-	 * @param outputStream
-	 *            输出流的引用
-	 */
 	public void reSendData(Object object, Object outputStream)
 	{
 		((LinkedList) outputStream).offer(object);
 	}
 
-	/**
-	 * 字节流转字符串
-	 * 
-	 * @param stream
-	 * @param listener
-	 * 
-	 */
 
 	public void receiveData(Object stream,ListListener listern)
 	{
@@ -104,19 +79,7 @@ public class CommCommunicate implements CommunicateProxy
 		list.add(new Integer(-1));
 	}
 
-	public void setListern(Object dd){};
-	/**
-	 * 
-	 * 发送方法
-	 * 
-	 * @param url
-	 *            发送地址
-	 * @param serverType
-	 *            操作类型
-	 * @param params
-	 *            map参数
-	 * @return
-	 */
+	public void setListern(Object dd){}
 	public WdemsDateType send(Object params){
 			return null;}
 }

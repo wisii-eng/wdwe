@@ -22,14 +22,8 @@
  * 
  */
 public class CommincateFactory {
-	/**applet的服务根路径*/
 	public static String serverUrl;
 	public static final String requestUrl="/wisii/jsp/CommServer.jsp"; 
-	/**
-	 * 该方法用于产生
-	 * @param serverUrl
-	 * @return
-	 */
 	public static CommunicateProxy makeComm(String serverUrl) {
 		// System.out.println("serverUrl = "+serverUrl);
 		if (serverUrl != null && !serverUrl.isEmpty()

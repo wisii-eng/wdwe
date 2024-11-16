@@ -58,8 +58,6 @@ public class WholeValidateActionDoit extends Command
 	/**
 	 * 判断是否有验证错误的对象
 	 * 
-	 * @param com
-	 *            当前主界面的panel
 	 * @return 返回false的时候则证明没有错误项或者用户取消了修改错误项，返回true则证明用户放弃了更改。
 	 */
 	protected boolean dealWrongValidateComponent() {

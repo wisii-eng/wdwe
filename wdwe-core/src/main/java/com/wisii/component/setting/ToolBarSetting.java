@@ -35,11 +35,6 @@ public final class ToolBarSetting
 	/* 工具栏下每个按钮对象 */
 	private List items;
 
-	/**
-	 * 得到toolbar节点并解析
-	 * 
-	 * @param toolbar
-	 */
 	public ToolBarSetting(Element toolbar)
 	{
 
@@ -73,26 +68,16 @@ public final class ToolBarSetting
 
 	}
 
-	/**
-	 * @return location
-	 */
 	public String getLocation()
 	{
 		return location;
 	}
 
-	/**
-	 * @param location
-	 *            要设置的 location
-	 */
 	public void setLocation(String location)
 	{
 		this.location = location;
 	}
 
-	/**
-	 * @return items
-	 */
 	public List getItems()
 	{
 		return items;

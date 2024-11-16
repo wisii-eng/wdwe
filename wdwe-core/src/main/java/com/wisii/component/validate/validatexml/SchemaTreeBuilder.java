@@ -27,7 +27,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 /**
- * <p><pre>
+ * 
  * 1.概述：
  *     本类的作用是利用SAX解析xml schema文件，得到各xml数据节点的类型信息和其他的限定条件，
  * 作为客户端进行数据校验的依据。
@@ -38,7 +38,7 @@ import org.xml.sax.helpers.DefaultHandler;
  * 3.处理结果：
  *     处理的结果是allElementMap,其结构信息参见属性<code>allElementMap</code>，通过public方法
  * <code>getAllElementMap</code>得到处理结果。
- * </pre></p>
+ * 
  * @author zkl.
  * @version 1.0  20007/05/15
  */
@@ -588,10 +588,10 @@ public class SchemaTreeBuilder extends DefaultHandler
     /**
      * <p>schema文档的解析完成，已经将各种需要的信息存入了相应的容器，最后在此方法中
      * 将element和attribute完善：
-     * <li>通过type属性，引用外部定义的complexType或simpleType的，将complexType中定义的子元素和
+     * <p>通过type属性，引用外部定义的complexType或simpleType的，将complexType中定义的子元素和
      * 属性添加到当前引用位置。将simpleType中的类型定义添加到当前引用元素或属性的Map中。
-     * <li>通过ref属性引用外部定义的元素或节点的，将完整的外部元素插入到当前引用位置。
-     * <li>通过ref应用group或attributeGroup时，将group或attributeGroup中的内容添加到当前引用位置。
+     * <p>通过ref属性引用外部定义的元素或节点的，将完整的外部元素插入到当前引用位置。
+     * <p>通过ref应用group或attributeGroup时，将group或attributeGroup中的内容添加到当前引用位置。
      */
     public void endDocument() throws SAXException
     {

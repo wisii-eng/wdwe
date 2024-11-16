@@ -26,8 +26,6 @@ public interface WdemsActionFactory {
 	
 	/**
 	 * 生成控件组件的方法
-	 * @param wdemsComponent
-	 * @return
 	 */
 	public Actions makeAction(WdemsComponent wc);
 

@@ -25,8 +25,6 @@ import java.sql.SQLException;
 public class UnDoUtil {
 	/**
 	 * 该方法用来记录撤销事件
-	 * @return
-	 * @throws SQLException 
 	 */
 	public static boolean recordUndo(int oper ,String xpath, String shortName ,String content)
 	{
@@ -39,8 +37,6 @@ public class UnDoUtil {
 	 * 该方法用来处理撤销先得到该ID，自动取出比这个ID值大的所有数据项，依次对他们进行update的操作
 	 * 注：该方法目前仅支持 数据的更改，不支持结构改变之后的问题
 	 * @param id  会传递进来撤销列表项的ID，然后进行撤销
-	 * @return
-	 * @throws Exception 
 	 */
 	public static boolean undo(int id)
 	{

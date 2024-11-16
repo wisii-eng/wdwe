@@ -46,7 +46,7 @@ import javax.swing.event.PopupMenuEvent;
 import javax.swing.event.PopupMenuListener;
 import javax.swing.plaf.ButtonUI;
 import javax.swing.plaf.basic.BasicButtonUI;
-import com.sun.java.swing.plaf.windows.WindowsButtonUI;
+//import com.sun.java.swing.plaf.windows.WindowsButtonUI;
 import com.wisii.component.startUp.SystemUtil;
 import com.wisii.edit.util.EngineUtil;
 import com.wisii.fov.apps.FOUserAgent;
@@ -70,53 +70,26 @@ import com.wisii.fov.apps.FOUserAgent;
  */
 
 public class JPopupButton extends JComponent implements Serializable {
-	/**
-	 * 普通按钮
-	 */
 	public static final int TYPE_NORMAL = 0;
 
 	private boolean hideText = false;
 
-	/**
-	 * 两个按钮组合成的弹出菜单按钮
-	 */
 	public static final int TYPE_WITH_RIGHT_TOGGLE = 1;
 
-	/**
-	 * 按钮类型
-	 */
 	private int style = -1;
 
-	/**
-	 * 合成按钮左按钮的事件
-	 */
 	private int actionIndex = -1;
 
-	/**
-	 * 弹出菜单
-	 */
 	private JPopupMenu popup = null;
 
-	/**
-	 * 是否需要更新
-	 */
 	private boolean mustRefresh = false;
 
-	/**
-	 * 左按钮
-	 */
 	private JToggleButton btnLeft;
 
-	/**
-	 * 右按钮
-	 */
 	private JButton bttRight;
 	private String rkey;
 	private String lkey;
 
-	/**
-	 * 按钮事件
-	 */
 	private PopupButtonListener listener = new PopupButtonListener();
 	
 	private UpBorder upBorder = new UpBorder();
@@ -293,16 +266,6 @@ public class JPopupButton extends JComponent implements Serializable {
 		this(style, text, icon, key,new JPopupMenu());
 	}
 
-	/**
-	 * @param style
-	 *            int 按钮类型
-	 * @param text
-	 *            String 显示文字
-	 * @param icon
-	 *            Icon 显示图标
-	 * @param popup
-	 *            JPopupMenu 弹出菜单
-	 */
 	public JPopupButton(int style, String text, Icon icon, JPopupMenu popup) {
 		createButtons();
 		setIcon(icon);
@@ -312,16 +275,6 @@ public class JPopupButton extends JComponent implements Serializable {
 		setStyle(style);
 	}
 
-	/**
-	 * @param style
-	 *            int 按钮类型
-	 * @param text
-	 *            String 显示文字
-	 * @param icon
-	 *            Icon 显示图标
-	 * @param popup
-	 *            JPopupMenu 弹出菜单
-	 */
 	public JPopupButton(int style, String text, String icon,String key, JPopupMenu popup) {
 		createButtons();
 //		setIcon(icon);
@@ -334,9 +287,6 @@ public class JPopupButton extends JComponent implements Serializable {
 		setKey(key);
 	}
 
-	/**
-	 * 显示菜单
-	 */
 	protected void showPopupMenu() {
 		if (popup == null) {
 			return;
@@ -349,9 +299,9 @@ public class JPopupButton extends JComponent implements Serializable {
 			btnLeft = new JToggleButton() {
 				private static final long serialVersionUID = -2354623448457880135L;
 				public void setUI(ButtonUI ui) {
-					if (ui instanceof WindowsButtonUI) {
-						ui = new BasicButtonUI();
-					}
+//					if (ui instanceof WindowsButtonUI) {
+//						ui = new BasicButtonUI();
+//					}
 					super.setUI(ui);
 				}
 			};
@@ -362,9 +312,9 @@ public class JPopupButton extends JComponent implements Serializable {
 		if (bttRight == null) {
 			bttRight = new JButton() {
 				public void setUI(ButtonUI ui) {
-					if (ui instanceof WindowsButtonUI) {
-						ui = new BasicButtonUI();
-					}
+//					if (ui instanceof WindowsButtonUI) {
+//						ui = new BasicButtonUI();
+//					}
 					super.setUI(ui);
 				}
 
@@ -389,9 +339,6 @@ public class JPopupButton extends JComponent implements Serializable {
 		}
 	}
 	
-	/**
-	 * 更新组件布局
-	 */
 	protected void refreshUI() {
 		if (!mustRefresh) {
 			return;
@@ -414,12 +361,6 @@ public class JPopupButton extends JComponent implements Serializable {
 		this.doLayout();
 	}
 
-	/**
-	 * 设置按钮类型
-	 * 
-	 * @param style
-	 *            int
-	 */
 	public void setStyle(int style) {
 		if (this.style != style) {
 			mustRefresh = true;
@@ -428,40 +369,19 @@ public class JPopupButton extends JComponent implements Serializable {
 		refreshUI();
 	}
 
-	/**
-	 * 取得按钮类型
-	 * 
-	 * @return int
-	 */
 	public int getStyle() {
 		return style;
 	}
 
-	/**
-	 * 设置显示文字
-	 * 
-	 * @param text
-	 *            String
-	 */
 	public void setText(String text) {
 		btnLeft.setText(text);
 		btnLeft.setToolTipText("切换层");
 		bttRight.setToolTipText("选择层");
 	}
-	/**
-	 * 取得显示文字
-	 * 
-	 * @return String
-	 */
 	public String getText() {
 		return btnLeft.getText();
 	}
 	
-	/**
-	 * add by px 快捷键
-	 * 
-	 * @return 
-	 */
 	public void setKey(String key){
 		lkey = "ctrl "+key;
 		rkey = "ctrl shift "+key;
@@ -489,11 +409,6 @@ public class JPopupButton extends JComponent implements Serializable {
 		bttRight.getActionMap().put("R",rAction);
 
 	}
-	/**
-	 * add by px 左键事件
-	 * 
-	 * @return 
-	 */
 	public void btnLeftDo(){
 		if(btnLeft.isSelected()){
 		btnLeft.setBorder(downBorder);
@@ -508,11 +423,6 @@ public class JPopupButton extends JComponent implements Serializable {
 		agent.setViewNoBack(btnLeft.isSelected());
 		EngineUtil.getEnginepanel().reload();
 	}
-	/**
-	 * add by px 右键事件
-	 * 
-	 * @return 
-	 */
 	public void btnRightDo(){
 		btnLeft.setBorder(upBorder);
 		bttRight.setBorder(downBorder);
@@ -524,24 +434,12 @@ public class JPopupButton extends JComponent implements Serializable {
 	}
 
 
-	/**
-	 * 设置灰化状态
-	 * 
-	 * @param enabled
-	 *            boolean
-	 */
 	public void setEnabled(boolean enabled) {
 		super.setEnabled(enabled);
 		btnLeft.setEnabled(enabled);
 		bttRight.setEnabled(enabled);
 	}
 
-	/**
-	 * 设置显示图标
-	 * 
-	 * @param icon
-	 *            Icon
-	 */
 	public void setIcon(Icon icon) {
 
 		btnLeft.setIcon(icon);
@@ -549,12 +447,6 @@ public class JPopupButton extends JComponent implements Serializable {
 
 	}
 
-	/**
-	 * 设置显示图标
-	 * 
-	 * @param icon
-	 *            Icon
-	 */
 	public void setIcon(String icon) {
 		URL url = SystemUtil.getImagesPath(icon);
 		if (url != null) {
@@ -564,30 +456,14 @@ public class JPopupButton extends JComponent implements Serializable {
 
 	}
 
-	/**
-	 * 取得显示图标
-	 * 
-	 * @return Icon
-	 */
 	public Icon getIcon() {
 		return btnLeft.getIcon();
 	}
 
-	/**
-	 * 组合按钮时设置左按钮相当于菜单某项的动作
-	 * 
-	 * @param index
-	 *            int
-	 */
 	public void setActionSameAsPopup(int index) {
 		this.actionIndex = index;
 	}
 
-	/**
-	 * 取得组合按钮左按钮相当于菜单某项的动作
-	 * 
-	 * @return int
-	 */
 	public int getActionSameAsPopup() {
 		return actionIndex;
 	}
@@ -596,12 +472,6 @@ public class JPopupButton extends JComponent implements Serializable {
 		return this.btnLeft;
 	}
 
-	/**
-	 * 设置弹出式菜单
-	 * 
-	 * @param pop
-	 *            JPopupMenu
-	 */
 	public void setPopup(JPopupMenu pop) {
 		if (this.popup != null) {
 			popup.removePopupMenuListener(listener);
@@ -611,11 +481,6 @@ public class JPopupButton extends JComponent implements Serializable {
 		popup.addPopupMenuListener(listener);
 	}
 
-	/**
-	 * 取得弹出式菜单
-	 * 
-	 * @return JPopupMenu
-	 */
 	public JPopupMenu getPopup() {
 		return popup;
 	}

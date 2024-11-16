@@ -35,34 +35,17 @@ import com.wisii.fov.command.plugin.FOMethod;
  */
 public class WdemsDateType {
 
-	/**
-	 * @param args
-	 */
 	private Object inReturnDateType = null;
 
-	/**
-	 * main方法
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		System.out.println((int) (Math.random() * 36));
 
 	}
 
-	/**
-	 * 构造 可接受的类型包括：InputStream LinkedList PrintWrite
-	 * 
-	 * @param in
-	 */
 	public WdemsDateType(Object in) {
 		this.inReturnDateType = in;
 	}
 
-	/**
-	 * 适用于返回数据的时候可能会有输入流的形式，也可能会有队列的形式
-	 * 
-	 * @return
-	 */
 	public Object getReturnDateType() {
 		if (inReturnDateType instanceof InputStream) {
 			String line = ""; // 读取流每一行的数据
@@ -119,12 +102,6 @@ public class WdemsDateType {
 
 	}
 
-	/**
-	 * 用于合并session和前台内存变量从中读取数据
-	 * @param para
-	 * @param request
-	 * @return
-	 */
 	public WisiiBean getWisiiBean(Map para, HttpServletRequest request) {
 		//TODO
 		/*WisiiBean wb = null;
@@ -146,12 +123,6 @@ public class WdemsDateType {
 		return null;
 	}
 
-	/**
-	 * 
-	 * 保存wisiibean到内存
-	 * @param wb
-	 * @param request
-	 */
 	public void saveWisiiBean(WisiiBean wb, HttpServletRequest request) {
 		//TODO
 		/*if (type == this.SESSIONT) {
@@ -162,11 +133,6 @@ public class WdemsDateType {
 		}*/
 	}
 
-	/**
-	 * 用于发送数据到输出流
-	 * 
-	 * @param ss
-	 */
 	public void flush(Object ss) {
 		if (inReturnDateType instanceof PrintWriter) {
 			

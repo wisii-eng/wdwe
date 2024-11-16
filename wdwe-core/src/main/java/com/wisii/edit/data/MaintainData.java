@@ -53,8 +53,7 @@ public class MaintainData {
 	 *            本次操作要修改的xpath
 	 * @param data
 	 *            本次操作的数据
-	 * @para isUndo 是否进行撤销操作 true
-	 *       进行撤销的记录，false，不进行撤销的记录，除了撤销的时候这个参数为false外，其他外部引用时均为ture
+	 * @param isUndo 是否进行撤销操作 true
 	 * @return 是否更新成功
 	 * @throws Exception
 	 * 

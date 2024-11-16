@@ -38,11 +38,6 @@ public class RemoteInvoke implements InvokeProxy, Remote
 	// 主机rmi的段口号 默认为 1099
 	String rmiport;
 
-	/*
-	 * （非 Javadoc）
-	 * 
-	 * @see com.wisii.component.mainFramework.InvokeProxy#execute(java.lang.Object)
-	 */
 	public Object execute(Object para)
 	{
 		try
@@ -67,16 +62,7 @@ public class RemoteInvoke implements InvokeProxy, Remote
 		return null;
 	}
 
-	/*
-	 * （非 Javadoc）
-	 * 
-	 * @see com.wisii.component.mainFramework.InvokeProxy#init()
-	 */
 	public void init(){}
-
-	/**
-	 * 构造
-	 */
 	public RemoteInvoke(String ip, String port, String name)
 	{
 		this.rmiip = ip;

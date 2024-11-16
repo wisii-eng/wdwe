@@ -18,17 +18,8 @@
 public class ComponentFactory
 {
 
-	/**
-	 * 类的实例
-	 * 
-	 * 
-	 */
 	public WisiiComponent wico;
 
-	/**
-	 * 工厂方法
-	 * @param type 
-	 */
 	public WisiiComponent createWisiiComponent(String type)
 	{
 		String classname = "com.wisii.component.create" + type.toLowerCase()
@@ -43,18 +34,15 @@ public class ComponentFactory
 		}
 		catch (ClassNotFoundException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 
 		}
 		catch (InstantiationException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		catch (IllegalAccessException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;

@@ -23,10 +23,6 @@ public interface MessageListener {
 
 	public boolean refresh();
 	public boolean buttonContral(String buttonName, boolean isButtonActive);
-	/**
-	 * 该方法用于弹出窗口询问用户是否可行
-	 * @return
-	 */
 	public boolean askIfItIs(String msg);
 	
 }

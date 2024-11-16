@@ -56,22 +56,11 @@ public class CustomerSetting
 		return instance;
 	}
 
-	/**
-	 * 无参构造
-	 */
 	private CustomerSetting()
 	{
 		// regiestSetting();
 	}
 
-	/**
-	 * 有参构造
-	 * 
-	 * 当参数ID不为null的时候，才赋值给settingId，否则为default。 当settingId=id的时候就不重新解析。
-	 * 
-	 * @param id
-	 *            setting Id
-	 */
 	public CustomerSetting init(String id)
 	{
 		if (id != null && id.length() > 0)
@@ -97,9 +86,6 @@ public class CustomerSetting
 		return instance;
 	}
 
-	/**
-	 * 读取配置文件，分离Setting，建立根节点
-	 */
 	private void regiestSetting()
 	{
 
@@ -139,12 +125,6 @@ public class CustomerSetting
 		}
 	}
 
-	/**
-	 * String 中是否存在 当前id的setting
-	 * 
-	 * @param dd
-	 * @return
-	 */
 	public boolean haveThisId(String dd)
 	{
 		if (dd.indexOf("<setting") != -1&&dd.indexOf('"'+settingId+'"') != -1)
@@ -154,23 +134,11 @@ public class CustomerSetting
 		return false;
 	}
 
-	/**
-	 * 得到所有的的toolbar的节点
-	 * 
-	 * @param id
-	 *            toolbar id
-	 * @return
-	 */
 	public ToolBarSetting getToolBarSetting()
 	{	
 		return toolbarsetting;
 	}
 
-	/**
-	 * 以行为单位读取文件的内容,一次读一整行
-	 * 
-	 * @param filename
-	 */
 	private String readFileByLines(InputStream input)
 	{
 

@@ -80,7 +80,6 @@ public class PageViewPortListener extends ListListener implements Serializable
 		
 	}
 	
-    /** 设置向客户端发送数据的writer */
     public void setOutputStream(Object mOutputStream)
     {
         this.out = mOutputStream;

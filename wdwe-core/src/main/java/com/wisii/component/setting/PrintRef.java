@@ -33,10 +33,6 @@ public class PrintRef implements Serializable {
 		PCL, PS, PNG, TIFF, TXT, PDF, PRINT,AFP,AWT,FLASH;
 	}
 
-	/*
-	 * 组号，为上述信息分配组号默认为0；如果为没有分组号信息， 则直接选择默认的打印参数，否则就按照组号的设置进行打印
-	 * 
-	 */
 	private int groupId = 0;
 
 	/* 打印机 */
@@ -152,62 +148,33 @@ public class PrintRef implements Serializable {
 		}
 	}
 
-	/**
-	 * @return commonLine
-	 */
 	public String getCommonLine() {
 		return commonLine;
 	}
-
-	/**
-	 * @param commonLine
-	 *            要设置的 commonLine
-	 */
 	public void setCommonLine(String commonLine) {
 		this.commonLine = commonLine;
 	}
 
-	/**
-	 * @return groupId
-	 */
 	public int getGroupId() {
 		return groupId;
 	}
 
-	/**
-	 * @param groupId
-	 *            要设置的 groupId
-	 */
 	public void setGroupId(int groupId) {
 		this.groupId = groupId;
 	}
 
-	/**
-	 * @return mediaPosition
-	 */
 	public String getMediaPosition() {
 		return mediaPosition;
 	}
 
-	/**
-	 * @param mediaPosition
-	 *            要设置的 mediaPosition
-	 */
 	public void setMediaPosition(String mediaPosition) {
 		this.mediaPosition = mediaPosition;
 	}
 
-	/**
-	 * @return outputMode
-	 */
 	public OUTPUTMode getOutputMode() {
 		return outputMode;
 	}
 
-	/**
-	 * @param outputMode
-	 *            要设置的 outputMode
-	 */
 	private void setOutputMode(String outputMode) {
 		OUTPUTMode mode = OUTPUTMode.valueOf(outputMode.toUpperCase());
 		if (mode != null) {
@@ -219,10 +186,6 @@ public class PrintRef implements Serializable {
 		this.outputMode = outputMode;
 	}
 
-	/**
-	 * @param printerIp
-	 *            要设置的 printerIp
-	 */
 	public void setPrinter(int type, String printer) {
 
 		if (type == PRINTER_IP)
@@ -231,9 +194,6 @@ public class PrintRef implements Serializable {
 			this.printerName = printer;
 	}
 
-	/**
-	 * @return the printerName
-	 */
 	public String getPrinter() {
 		if (printerIP != null && !printerIP.equalsIgnoreCase(""))
 			return printerIP;

@@ -35,8 +35,6 @@ import javax.swing.JApplet;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import netscape.javascript.JSObject;
-
 import com.wisii.AppletFrame;
 import com.wisii.component.actionevent.ActionEventType;
 import com.wisii.component.mainFramework.commun.CommincateFactory;
@@ -57,9 +55,6 @@ import com.wisii.fov.util.WDWEUtil;
 
 public class Start extends JApplet
 {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	/*-----线程池----*/
 	private static ExecutorService service;
@@ -74,29 +69,11 @@ public class Start extends JApplet
 	private String xslStr = null;
 	private EnginePanel enginepanel;
 	private static WdemsPopupBrowserCom wdemsBrowser;
-	private static JSObject js;
-	/**
-	 * Constructor of the applet.
-	 * 
-	 * @exception HeadlessException
-	 *                if GraphicsEnvironment.isHeadless() returns true.
-	 */
+//	private static JSObject js;
 	public Start()
 	{
 		super();
 	}
-	/**
-	 * Called by the browser or applet viewer to inform this applet that it is
-	 * being reclaimed and that it should destroy any resources that it has
-	 * allocated. The <code>stop</code> method will always be called before
-	 * <code>destroy</code>.
-	 * <p>
-	 * A subclass of <code>Applet</code> should override this method if it has
-	 * any operation that it wants to perform before it is destroyed. For
-	 * example, an applet with threads would use the <code>init</code> method to
-	 * create the threads and the <code>destroy</code> method to kill them.
-	 * <p>
-	 */
 	@Override
 	public void destroy()
 	{
@@ -104,31 +81,11 @@ public class Start extends JApplet
 		WdemsTagManager.Instance.clearCurrentPageComponents();
 		service.shutdown();
 	}
-	/**
-	 * Returns information about this applet. An applet should override this
-	 * method to return a <code>String</code> containing information about the
-	 * author, version, and copyright of the applet.
-	 * <p>
-	 * 
-	 * @return a string containing information about the author, version, and
-	 *         copyright of the applet.
-	 */
 	@Override
 	public String getAppletInfo()
 	{
 		return "This is startUP created by www.wisii.com.cn";
 	}
-	/**
-	 * Called by the browser or applet viewer to inform this applet that it has
-	 * been loaded into the system. It is always called before the first time
-	 * that the <code>start</code> method is called.
-	 * <p>
-	 * A subclass of <code>Applet</code> should override this method if it has
-	 * initialization to perform. For example, an applet with threads would use
-	 * the <code>init</code> method to create the threads and the
-	 * <code>destroy</code> method to kill them.
-	 * <p>
-	 */
 	@Override
 	public void init()
 	{
@@ -145,18 +102,6 @@ public class Start extends JApplet
 //		js = JSObject.getWindow(this);
 		// -------------end--------------------//
 	}
-	/**
-	 * Called by the browser or applet viewer to inform this applet that it
-	 * should start its execution. It is called after the <code>init</code>
-	 * method and each time the applet is revisited in a Web page.
-	 * <p>
-	 * A subclass of <code>Applet</code> should override this method if it has
-	 * any operation that it wants to perform each time the Web page containing
-	 * it is visited. For example, an applet with animation might want to use
-	 * the <code>start</code> method to resume animation, and the
-	 * <code>stop</code> method to suspend the animation.
-	 * <p>
-	 */
 	@Override
 	public void start()
 	{
@@ -228,11 +173,6 @@ public class Start extends JApplet
 		}
 		return sb.toString().substring(0, sb.length() - 1);
 	}
-	/**
-	 * 单机版命令行方式直接调用 。
-	 * 命令行如下：
-	 * -xml,tuanxian.xml,-xsl,tuanxian.xsl,-awt[-print,-ps......]
-	 */
 	public static void main(String[] args)
 	{
 		WisiiBean wisiiBean = new WisiiBean();
@@ -273,12 +213,6 @@ public class Start extends JApplet
 		}
 	}
 	// ******************zmz add ****************************
-	/**
-	 * 实现和main方法一样的功能.
-	 * 
-	 * @param bean
-	 *            参数bean里面至少要设置outputmode, xml数据和xsl数据
-	 */
 	public RenderResult startExecute(WisiiBean wisiiBean)
 	{
 		Object l = Sutil.getF("yuyu");
@@ -348,7 +282,6 @@ public class Start extends JApplet
 			}
 			catch (FileNotFoundException e)
 			{
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			System.out.println("文件已生成：" + ff.getAbsolutePath());
@@ -368,19 +301,6 @@ public class Start extends JApplet
 		}
 	}
 	// ********************zmz add end************************
-	/**
-	 * Called by the browser or applet viewer to inform this applet that it
-	 * should stop its execution. It is called when the Web page that contains
-	 * this applet has been replaced by another page, and also just before the
-	 * applet is to be destroyed.
-	 * <p>
-	 * A subclass of <code>Applet</code> should override this method if it has
-	 * any operation that it wants to perform each time the Web page containing
-	 * it is no longer visible. For example, an applet with animation might want
-	 * to use the <code>start</code> method to resume animation, and the
-	 * <code>stop</code> method to suspend the animation.
-	 * <p>
-	 */
 	@Override
 	public void stop()
 	{
@@ -403,11 +323,6 @@ public class Start extends JApplet
 		thread = null;
 		locked = null;
 	}
-	/**
-	 * js调用响应事件
-	 * 
-	 * @throws FOVException
-	 */
 	public String askWiApplet(String para)
 	{
 		try
@@ -442,28 +357,14 @@ public class Start extends JApplet
 		}
 		return "start the Wisii Applet and receive commands";
 	}
-	/**
-	 * 设置xml
-	 * 
-	 * @throws FOVException
-	 */
 	public void setXmlStr(String xml) throws FOVException
 	{
 		xmlStr = SystemUtil.getURLDecoderdecode(xml);
 	}
-	/**
-	 * 设置xml
-	 * 
-	 * @throws FOVException
-	 */
 	public void setXslStr(String xsl) throws FOVException
 	{
 		xslStr = SystemUtil.getURLDecoderdecode(xsl);
 	}
-	/**
-	 * @author liuxiao 用于事件机制中的回调
-	 *         需要组装的参数包括
-	 */
 	public void ActionEvent(ActionEventType info, String para1,
 			WisiiBean wisiibean)
 	{
@@ -502,18 +403,14 @@ public class Start extends JApplet
 				para[3] = "true";
 			}
 		}
-		try
-		{
-			JSObject.getWindow(this).call("wiActionEvent", para);
-		}
-		catch (Exception e)
-		{
-		}
+//		try
+//		{
+//			JSObject.getWindow(this).call("wiActionEvent", para);
+//		}
+//		catch (Exception e)
+//		{
+//		}
 	}
-	/**
-	 * 该方法用于applet生命周期为结束其间发生的需要清楚换村的操作例如： 换文件 换文件包括： 换xml,换xslt，换xsd
-	 * 等。在这里面进行清空操作
-	 */
 	private void clean()
 	{
 		EditStatusControl.init();
@@ -551,7 +448,7 @@ public class Start extends JApplet
 	}
 	public static void callBrowser(WdemsPopupBrowserCom wb,String[] s){
 		Start.wdemsBrowser = wb;
-		js.call("openjsp", s);
+//		js.call("openjsp", s);
 	}
 	public void setData(String s){
 		Start.wdemsBrowser.setValue(s);

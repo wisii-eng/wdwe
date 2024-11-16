@@ -36,9 +36,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 获取节点类型
 	 * 
-	 * @param
-	 * @return
-	 * @exception
 	 */
 	int getType();
 
@@ -46,9 +43,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 设置节点类型
 	 * 
-	 * @param
-	 * @return
-	 * @exception
 	 */
 	void setType(int type);
 
@@ -56,11 +50,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 获得所有的属性节点
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	List<TreeDSNode> getAttribute();
 
@@ -68,11 +57,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 设置属性节点
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	void setAttribute(List<TreeDSNode> value);
 
@@ -80,9 +64,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 获得节点名称
 	 * 
-	 * @param
-	 * @return
-	 * @exception
 	 */
 	String getName();
 
@@ -90,11 +71,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 设置元素名
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	void setName(String name);
 
@@ -102,11 +78,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 获得元素的文本
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	String getValue();
 
@@ -114,11 +85,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 设置文本
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	void setValue(String value);
 
@@ -126,11 +92,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 获得元素的文本节点
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	TreeDSNode getText();
 
@@ -138,11 +99,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 设置文本节点
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	void setText(TreeDSNode value);
 
@@ -150,11 +106,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 设置子元素
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	public void setChildren(List<TreeDSNode> children);
 
@@ -162,11 +113,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 设置父元素
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	public void setParent(TreeDSNode parent);
 
@@ -174,11 +120,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 获得父元素
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	public TreeDSNode getParent();
 
@@ -186,11 +127,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 添加子元素
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	public void addChild(TreeDSNode child);
 
@@ -198,20 +134,12 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 获得字符串
 	 *
-	 * @param      {引入参数名}   {引入参数说明}
-	 * @return      {返回参数名}   {返回参数说明}
-	 * @exception   {说明在某情况下,将发生什么异常}
 	 */
 	public String getString();
 	/**
 	 * 
 	 * 清除属性值和文本
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	public void clearNode();
 
@@ -219,11 +147,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 添加属性
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	public void addAttributeChild(TreeDSNode child);
 
@@ -231,11 +154,6 @@ public interface TreeDSNode extends TreeNode
 	 * 
 	 * 节点克隆
 	 * 
-	 * @param 引入参数名
-	 *            引入参数说明}
-	 * @return 返回参数名} {返回参数说明}
-	 * @exception 说明在某情况下
-	 *                ,将发生什么异常}
 	 */
 	public TreeDSNode clone();
 

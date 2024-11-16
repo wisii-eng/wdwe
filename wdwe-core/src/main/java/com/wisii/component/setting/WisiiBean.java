@@ -136,7 +136,6 @@ public class WisiiBean implements Serializable
 	 * 该构造用于在applet中直接初始化wisiibean用，在弹出窗口方式的客户端情况下使用
 	 * 直接在wisiibean内部得到applet中的大部分参数减少静态变量
 	 * 
-	 * @param apl
 	 */
 	public WisiiBean(Start apl)
 	{
@@ -164,12 +163,6 @@ public class WisiiBean implements Serializable
 		setAuthorityId(apl.getParameter(WisiiBean.AUTHORITHID));
 		setPrintbyFlash(apl.getParameter(WisiiBean.PRINTBYFLASH));
 	}
-	/**
-	 * 20090210 liuxiao 解析String形式的layer参数，转化为set 20090706
-	 * 修改该方法为题需层信息的时候将层信息转成Set
-	 * 
-	 * @param layer
-	 */
 	public Set getparaLayers(String layer)
 	{
 		Set layers = new HashSet();
@@ -190,14 +183,6 @@ public class WisiiBean implements Serializable
 		}
 		return layers;
 	}
-	/**
-	 * parses the commandline arguments
-	 * 
-	 * @return true if parse was successful and processing can continue, false
-	 *         if processing should stop
-	 * @exception FOVException
-	 *                if there was an error in the format of the options
-	 */
 	public boolean parseOptions(String[] args)
 	{
 		String nv = SystemUtil.getConfByName("base.isolationNv");
@@ -814,7 +799,6 @@ public class WisiiBean implements Serializable
 			return 1;
 		}
 	}
-	/** 【刘晓 解析新参数 20090616】 */
 	private void parseEditTempIdOption(String ss)
 	{
 		this.setEditTemplateId(ss);
@@ -845,7 +829,6 @@ public class WisiiBean implements Serializable
 	{
 		this.baseurl = baseurl;
 	}
-	/** 【change by liuxiao 20090616】* */
 	public boolean isEditable()
 	{
 		return (editString != null && !editString.isEmpty())
@@ -903,12 +886,6 @@ public class WisiiBean implements Serializable
 	{
 		return xmlString;
 	}
-	/**
-	 * 接收xml数据，通过xml数据文件的名字
-	 * 
-	 * @param xmlFileName
-	 *            xml数据的文件名，文件放在应用的固定文件夹下
-	 */
 	public void setXmlFile(String xmlFileName)
 	{
 		if (xmlString != null && !xmlString.isEmpty())
@@ -947,12 +924,6 @@ public class WisiiBean implements Serializable
 			xmlsource = null;
 		}
 	}
-	/**
-	 * 接收xml数据
-	 * 
-	 * @param xmlStream
-	 *            输入的xml数据为流的形式
-	 */
 	public void setXml(InputStream xmlStream)
 	{
 		// 将流转成String
@@ -1190,44 +1161,26 @@ public class WisiiBean implements Serializable
 			return;
 		this.docID = docID;
 	}
-	/**
-	 * @return the printSetting
-	 */
 	public PrintSetting getPrintSetting()
 	{
 		if (printSetting == null)
 			printSetting = new PrintSetting();
 		return printSetting;
 	}
-	/**
-	 * @param printSetting
-	 *            the printSetting to set
-	 */
 	public void setPrintSetting(PrintSetting printSetting)
 	{
 		this.printSetting = printSetting;
 	}
-	/**
-	 * @return the settingId
-	 */
 	public String getSettingId()
 	{
 		return settingId;
 	}
-	/**
-	 * @param settingId
-	 *            the settingId to set
-	 */
 	public void setSettingId(String settingId)
 	{
 		if (settingId == null || settingId.length() == 0)
 			return;
 		this.settingId = settingId;
 	}
-	/**
-	 * @param selectLevel
-	 *            the selectLevel to set
-	 */
 	public void setSelectedLayers(String selectedLayers)
 	{
 		if (selectedLayers == null || selectedLayers.isEmpty())
@@ -1236,24 +1189,14 @@ public class WisiiBean implements Serializable
 		}
 		this.selectedLayers = selectedLayers;
 	}
-	/**
-	 * @return the selectLevel
-	 */
 	public String getSelectedLayers()
 	{
 		return selectedLayers;
 	}
-	/**
-	 * @return the userPara
-	 */
 	public String getUserPara()
 	{
 		return userPara;
 	}
-	/**
-	 * @param userPara
-	 *            the userPara to set
-	 */
 	public void setUserPara(String userPara)
 	{
 		if (userPara == null || "".equalsIgnoreCase(userPara))
@@ -1280,47 +1223,26 @@ public class WisiiBean implements Serializable
 			return;
 		this.authorityId = authorityId;
 	}
-	/**
-	 * @return the isWholeValidate
-	 */
 	public boolean isWholeValidate()
 	{
 		return isWholeValidate;
 	}
-	/**
-	 * @param isWholeValidate
-	 *            the isWholeValidate to set
-	 */
 	public void setWholeValidate(boolean isWholeValidate)
 	{
 		this.isWholeValidate = isWholeValidate;
 	}
-	/**
-	 * @return the templatePara
-	 */
 	public Map getTemplatePara()
 	{
 		return templatePara;
 	}
-	/**
-	 * @return the templatePara
-	 */
 	public String getTemplateParaString()
 	{
 		return templatePara.toString();
 	}
-	/**
-	 * @param templatePara
-	 *            the templatePara to set
-	 */
 	public void setTemplatePara(Map templatePara)
 	{
 		this.templatePara = templatePara;
 	}
-	/**
-	 * @param templatePara
-	 *            the templatePara to set
-	 */
 	public void putTemplatePara(String key, String value)
 	{
 		if (templatePara == null)
@@ -1344,19 +1266,6 @@ public class WisiiBean implements Serializable
 		}
 		return SchemaDTDXml.checkXml(xmlString, xsdString);
 	}
-	/**
-	 * 获取servlet和application的数据文件的存放位置. 如果filePath是绝对路径,则整理并返回filePath的标准格式,
-	 * 若不是取baseUrl,如果baseUrl是绝对路径则返回baseUrl+filePath的标准格式,
-	 * 若baseUrl不是则取serverUrl,返回serverUrl+baseUrl+filePath的标准格式.
-	 * 
-	 * @param serverBaseUrl
-	 *            应用程序所在路径
-	 * @param baseUrl
-	 *            数据文件的基路径
-	 * @param filePath
-	 *            用户输入的文件路径．
-	 * @return servlet和application的数据文件的绝对路径.
-	 */
 	private String getRealPath(String serverBaseUrl, String baseUrl,
 			String filePath)
 	{
@@ -1432,13 +1341,6 @@ public class WisiiBean implements Serializable
 		}
 		return realPath;
 	}
-	/**
-	 * 如果字符串开头是指定字符，则去掉。
-	 * 
-	 * @param 要处理的字符串
-	 * @param 要去掉的字符
-	 * @return
-	 */
 	private String removeFirstChar(String str, char c)
 	{
 		if (str == null)
@@ -1468,9 +1370,6 @@ public class WisiiBean implements Serializable
 		}
 		return result;
 	}
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args)
 	{
 		/*
@@ -1519,55 +1418,30 @@ public class WisiiBean implements Serializable
 			e.printStackTrace();
 		}
 	}
-	/**
-	 * @return the xmlFileName
-	 */
 	public String getXmlFileName()
 	{
 		return xmlFileName;
 	}
-	/**
-	 * @param xmlFileName
-	 *            the xmlFileName to set
-	 */
 	public void setXmlFileName(String xmlFileName)
 	{
 		this.xmlFileName = xmlFileName;
 	}
-	/**
-	 * @return the xslFileName
-	 */
 	public String getXslFileName()
 	{
 		return xslFileName;
 	}
-	/**
-	 * @param xslFileName
-	 *            the xslFileName to set
-	 */
 	public void setXslFileName(String xslFileName)
 	{
 		this.xslFileName = xslFileName;
 	}
-	/**
-	 * @return the xsdFileName
-	 */
 	public String getXsdFileName()
 	{
 		return xsdFileName;
 	}
-	/**
-	 * @param xsdFileName
-	 *            the xsdFileName to set
-	 */
 	public void setXsdFileName(String xsdFileName)
 	{
 		this.xsdFileName = xsdFileName;
 	}
-	/**
-	 * @param foFileName
-	 *            the foFileName to set
-	 */
 	public void setFoFileName(String foFileName)
 	{
 		this.foFileName = foFileName;
@@ -1622,55 +1496,31 @@ public class WisiiBean implements Serializable
 		}
 		this.foString = fo.toString();
 	}
-	/**
-	 * @return the editString
-	 */
 	public String getEditString()
 	{
 		return editString;
 	}
-	/**
-	 * @return the xmlnm
-	 */
 	public String getXmlnm()
 	{
 		return xmlnm;
 	}
-	/**
-	 * @param xmlnm
-	 *            the xmlnm to set
-	 */
 	public void setXmlnm(String xmlnm)
 	{
 		this.xmlnm = xmlnm;
 	}
-	/**
-	 * @return the outputfilename
-	 */
 	public String getOutputfilename()
 	{
 		return outputfilename;
 	}
-	/**
-	 * @param outputfilename
-	 *            the outputfilename to set
-	 */
 	public void setOutputfilename(String outputfilename)
 	{
 		getPrintSetting().setOutputFileName(outputfilename);
 		this.outputfilename = outputfilename;
 	}
-	/**
-	 * @return the submitAdd
-	 */
 	public String getSubmitAdd()
 	{
 		return submitAdd;
 	}
-	/**
-	 * @param submitAdd
-	 *            the submitAdd to set
-	 */
 	public void setSubmitAdd(String submitAdd)
 	{
 		this.submitAdd = submitAdd;
@@ -1683,54 +1533,30 @@ public class WisiiBean implements Serializable
 	public void setGraphicurl(String graphicurl) {
 		this.graphicurl = graphicurl;
 	}
-	/**
-	 * @return the mode
-	 */
 	public boolean isMode()
 	{
 		return mode;
 	}
-	/**
-	 * @return the mdb
-	 */
 	public MutiDataBean getMdb()
 	{
 		return mdb;
 	}
-	/**
-	 * @param mdb
-	 *            the mdb to set
-	 */
 	public void setMdb(MutiDataBean mdb)
 	{
 		this.mdb = mdb;
 	}
-	/**
-	 * @return the xmlhead
-	 */
 	public String getXmlhead()
 	{
 		return xmlhead;
 	}
-	/**
-	 * @param xmlhead
-	 *            the xmlhead to set
-	 */
 	public void setXmlhead(String xmlhead)
 	{
 		this.xmlhead = xmlhead;
 	}
-	/**
-	 * @返回 editableauthoritys变量的值
-	 */
 	public String getEditableauthoritys()
 	{
 		return editableauthoritys;
 	}
-	/**
-	 * @param editableauthoritys 设置editableauthoritys成员变量的值
-	 *            值约束说明
-	 */
 	public void setEditableauthoritys(String editableauthoritys)
 	{
 		this.editableauthoritys = editableauthoritys;

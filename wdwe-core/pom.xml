@@ -10,9 +10,7 @@
   <artifactId>wdwe-core</artifactId>
   <name>wdwe-core</name>
   <description>wdwe核心包</description>
-
-  <properties>
-  </properties>
+  <url>http://www.wisii.com</url>
 
   <dependencies>
 	<dependency>

@@ -51,16 +51,6 @@ public class HttpCommunicate implements CommunicateProxy
 	{
 		this.serverUrl = serverUrl;
 	}
-	/**
-	 * 服务器返回数据的数据流
-	 * 
-	 * @param url
-	 *            请求服务的ip地址
-	 * @param serverType
-	 *            请求服务的类型
-	 * @param params
-	 *            需要传给服务器的参数
-	 */
 	public WdemsDateType send(String serverType, Object params)
 	{
 		Map<String, Object> facade = new HashMap<String, Object>();
@@ -143,13 +133,6 @@ public class HttpCommunicate implements CommunicateProxy
 	public void close(Object outputStream)
 	{
 	}
-	/**
-	 * 用于数据的返回
-	 * 
-	 * @param stream
-	 * @param outputStream
-	 *            输出流的引用
-	 */
 	public void reSendData(Object stream, Object outputStream)
 	{
 		// System.out.println("output stream = " + outputStream);
@@ -176,12 +159,6 @@ public class HttpCommunicate implements CommunicateProxy
 			e.printStackTrace();
 		}
 	}
-	/**
-	 * 字节流转字符串
-	 * 
-	 * @param stream
-	 * @param listener
-	 */
 	public void receiveData(Object stream, ListListener listener)
 	{
 		MyTread client = new MyTread(stream, listener);

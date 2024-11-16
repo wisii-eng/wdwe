@@ -190,13 +190,6 @@ public class SystemUtil {
 		return getURL("base.baseurl");
 	}
 
-	/**
-	 * 原功能 // 获得baseurl 即模板的根路径得到路径后再拼上/xml即数据文件的存放路径 20081113 刘晓 修改
-	 * 将方法改为工程的根路径+拼装base.baseurl 方法思路： 取得根路径，判断是b/s服务端还是客户端 还是单机版
-	 * 通过配置文件来进行根目录的识别
-	 * 
-	 * 
-	 */
 	public static String getURL(String ss) {
 		String path = getConfByName(ss);
 		if (path == null) {
@@ -255,9 +248,6 @@ public class SystemUtil {
 	}
 
 	// --------------------------------------------------add by zkl.
-	/**
-	 * 将得到的路径按照 "/"向上返回一级目录 add by liuxiao 20081106 例： d:/c1/c2/c3/c4
-	 */
 	public static String goToTheUpperLevel(String path) {
 		// path=path.replace("\\", File.separator);
 		// path=path.replace("/", File.separator);
@@ -342,14 +332,6 @@ public class SystemUtil {
 
 	// ---------------------add by liuxiao 20080102
 	// start-----------------------//
-	/**
-	 * 对字符串进行URLDecoder.encode(strEncoding)编码
-	 * 
-	 * @param String
-	 *            src 要进行编码的字符串
-	 * 
-	 * @return String 进行编码后的字符串
-	 */
 
 	public static String getURLEncode(String src) {
 		String requestValue = "";
@@ -363,14 +345,6 @@ public class SystemUtil {
 		return requestValue;
 	}
 
-	/**
-	 * 对字符串进行URLDecoder.decode(strEncoding)解码
-	 * 
-	 * @param String
-	 *            src 要进行解码的字符串
-	 * 
-	 * @return String 进行解码后的字符串
-	 */
 
 	public static String getURLDecoderdecode(String src) {
 		String requestValue = "";
@@ -384,14 +358,6 @@ public class SystemUtil {
 		return requestValue;
 	}
 
-	/**
-	 * 该方法用于将输入流复制成两个输入流。输出一个输入流数组，长度为2
-	 * 
-	 * @author liuxiao
-	 * @param cInputStream
-	 * @return InputStream[]
-	 * 
-	 */
 	public static InputStream[] getCopyInputStream(InputStream cInputStream) {
 		try {
 			byte[] bytes = new byte[1];
@@ -415,11 +381,6 @@ public class SystemUtil {
 		}
 	}
 
-	/**
-	 * 相差天数
-	 * 
-	 * @return days
-	 */
 	public static int days(long startDate, long endDate) {
 		int days = (int) ((endDate - startDate) / (1000 * 24 * 60 * 60) + 0.5);
 		return days;
@@ -430,11 +391,6 @@ public class SystemUtil {
 				"images/" + filename);
 	}
 
-	/**
-	 * 读取文件
-	 * 
-	 * @param filename
-	 */
 	public static InputStream readFileByLines(String filename) {
 
 		File file = null;
@@ -443,7 +399,6 @@ public class SystemUtil {
 			try {
 				effURL = new URL(filename);
 			} catch (MalformedURLException e1) {
-				// TODO 自动生成 catch 块
 				e1.printStackTrace();
 			}
 
@@ -485,15 +440,6 @@ public class SystemUtil {
 
 	}
 
-	/**
-	 * 从头开始复制一定数量的元素到新数组
-	 * 
-	 * @param original
-	 *            源数组。
-	 * @param newLength
-	 *            要复制的数组元素的数量。
-	 * @return 返回复制后的数组
-	 */
 	public static byte[] copyOf(byte[] original, int newLength) {
 		byte[] copy = new byte[newLength];
 		System.arraycopy(original, 0, copy, 0, Math.min(original.length,
@@ -501,17 +447,6 @@ public class SystemUtil {
 		return copy;
 	}
 
-	/**
-	 * 从一个位置开始复制到另一个位置的元素到新数组
-	 * 
-	 * @param original
-	 *            源数组
-	 * @param from
-	 *            源数组中的起始位置。
-	 * @param to
-	 *            源数组中的终点位置。
-	 * @return 返回复制后的数组
-	 */
 	public static byte[] copyOfRange(byte[] original, int from, int to) {
 		int newLength = to - from;
 		if (newLength < 0)
@@ -522,14 +457,6 @@ public class SystemUtil {
 		return copy;
 	}
 
-	/**
-	 * 大写字符：R 小写字符：typed r 小键盘字符：全部要转为大写
-	 * 如：inset→INSERT、home→HOME、delete→DELETE、page up→PAGE_UP、up->UP
-	 * 辅助键：均转化为小写表示 如：ctrl T 帮助键：F1 取消键：esc->ESCAPE 数字键盘：0->NUMPAD0
-	 * 
-	 * @param stroke
-	 * @return
-	 */
 	public final static String buildStroke(final String stroke) {
 		String[] elements = stroke.split(" ");
 		StringBuilder temp = new StringBuilder();
@@ -552,14 +479,6 @@ public class SystemUtil {
 		return temp.toString().trim();
 	}
 
-	/**
-	 * @author liuxiao
-	 * @param stroke
-	 * @return 可用的url
-	 * 
-	 *         servlet的来源有两种可能，一种是以 http打头的绝对路径，还有一中是/打头的相对路径。
-	 *         所以在这个方法里面做了区分，并且只在FrontServletTask这个类和AllBroeseTask这个类中引用
-	 */
 	public final static String servletUrl(final String servletUrl,
 			final String backUrl) {
 
