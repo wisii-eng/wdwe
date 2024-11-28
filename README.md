@@ -5,7 +5,7 @@
 <h4 align="center">基于B/S架构的文档处理引擎</h4>
 <p align="center">
 	<a href="https://gitee.com/wisii/wdwe/stargazers"><img src="https://gitee.com/wisii/wdwe/badge/star.svg?theme=dark"></a>
-	<a href="https://gitee.com/wisii/wdwe"><img src="https://img.shields.io/badge/wdwe-v2.0.0-brightgreen.svg"></a>
+	<a href="https://gitee.com/wisii/wdwe"><img src="https://img.shields.io/badge/wdwe-v2.0.1-brightgreen.svg"></a>
 </p>
 
 在使用wdwe前，请务必悉知 [***《wdwe免责声明》***](免责声明.md)！
