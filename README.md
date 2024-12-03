@@ -39,7 +39,7 @@ wdwe(WiseDoc WebEngine)基于APACHE FOP，是一套B/S架构的Web处理引擎�
 
 #### 使用说明
 
-示例项目：github([https://github.com/wisii_eng/wdwe-demo](https://github.com/wisii_eng/wdwe-demo))，gitee([https://gitee.com/wisii/wdwe-demo](https://gitee.com/wisii/wdwe-demo))
+示例项目：github([https://github.com/wisii-eng/wdwe-demo](https://github.com/wisii-eng/wdwe-demo))，gitee([https://gitee.com/wisii/wdwe-demo](https://gitee.com/wisii/wdwe-demo))
 
 **wdwe 将持续保证API的向下兼容，您可以放心的升级wdwe库至最新版本。**
 
@@ -89,7 +89,7 @@ public class HelloWorld {
 
 ### 推荐使用《wdtd表单设计器》生成XSL模板，下载地址：[https://www.wisii.com/wp-content/download/designer.zip](https://www.wisii.com/wp-content/download/designer.zip)
 wdtd表单设计器是一款支持动态数据、所见即所得、跨平台、具有丰富样式效果的表单设计器。
-wdtd表单设计器开源地址：github([https://github.com/wisii_eng/wdtd](https://github.com/wisii_eng/wdtd))，gitee([https://gitee.com/wisii/wdtd](https://gitee.com/wisii/wdtd))
+wdtd表单设计器开源地址：github([https://github.com/wisii-eng/wdtd](https://github.com/wisii-eng/wdtd))，gitee([https://gitee.com/wisii/wdtd](https://gitee.com/wisii/wdtd))
 #### 参与贡献
 
 1.  Fork 本仓库
